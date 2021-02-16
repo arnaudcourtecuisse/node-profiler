@@ -1,0 +1,17 @@
+{
+  "name": "profiler-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "app": "NODE_ENV=production node --prof index.js",
+    "load": "ab -k -n 10 http://localhost:5000/sync",
+    "profile": "find . -name \"isolate*\" -exec node --prof-process {} \\;"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
